@@ -36,7 +36,7 @@ uncompress_ascii(char* filename);
 // The following two is the byte version of LZ78.
 compress(char* filename);
 uncompress(char* filename);
---------------------
+
 
 tree.cpp includes the basic implementation of the dictionary of LZ78
 
@@ -47,7 +47,7 @@ Tree_node* insert_child(Tree_node *parent, char byte, int label);
 void print_path(Tree_node *last_node);
 char* path(Tree_node* last_node);
 void print_tree(Tree_node *root);
---------------------
+
 
 util.cpp includes the basic bits input and output
 
@@ -57,4 +57,3 @@ void print_letter(FILE* fp, char c);
 void print_final_label(FILE* fp, int label, int max_label);
 int read_label(FILE* fp, int max_label);
 int read_letter(FILE* fp, char &c);
---------------------
