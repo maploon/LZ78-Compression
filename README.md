@@ -29,6 +29,7 @@ Explanation of source files:
 LZ78.cpp includes the compress and uncompress methods. There are two different versions of compressing. One is used to compress only ascii files and the other is suitable for any file. Both methods implements the LZ78 dictionary as a tree for quick lookups.
 
 ----- LZ78.cpp -----
+
 // First two is the ascii version of LZ78.
 compress_ascii(char* filename);
 uncompress_ascii(char* filename);
@@ -41,6 +42,7 @@ uncompress(char* filename);
 tree.cpp includes the basic implementation of the dictionary of LZ78
 
 ----- tree.cpp -----
+
 struct Tree_node;
 Tree_node* find_child(Tree_node *parent, char c);
 Tree_node* insert_child(Tree_node *parent, char byte, int label);
@@ -52,6 +54,7 @@ void print_tree(Tree_node *root);
 util.cpp includes the basic bits input and output
 
 ----- util.cpp -----
+
 void print_label(FILE* fp, int label, int max_label);
 void print_letter(FILE* fp, char c);
 void print_final_label(FILE* fp, int label, int max_label);
